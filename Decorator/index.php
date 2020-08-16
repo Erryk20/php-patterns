@@ -8,10 +8,12 @@ use Decorator\Soy;
 use Decorator\Beverage;
 
 $beverage = new Espresso();
+$beverage->setSize(Beverage::GRANDE);
 $beverage = new Soy($beverage);
 echo $beverage->getDescription() . ' ' . $beverage->cost() . "<br>";
 
 $beverage1 = new Espresso();
+$beverage1->setSize(Beverage::GRANDE);
 $beverage1 = new Mocha($beverage1);
 $beverage1 = new Soy($beverage1);
 echo $beverage1->getDescription() . ' ' . $beverage1->cost() . "<br>";

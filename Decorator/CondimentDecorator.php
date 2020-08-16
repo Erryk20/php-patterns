@@ -18,4 +18,12 @@ abstract class CondimentDecorator implements BeverageInterface
     {
         $this->beverage = $beverage;
     }
+
+    /**
+     * @return int
+     */
+    public function getSize(): int
+    {
+        return $this->beverage->getSize();
+    }
 }

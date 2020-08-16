@@ -21,6 +21,22 @@ class Soy extends CondimentDecorator
      */
     public function cost(): float
     {
-        return .30 + $this->beverage->cost();
+        return $this->getPrice() + $this->beverage->cost();
+    }
+
+    /**
+     * @return int
+     */
+    private function getPrice(): int
+    {
+        switch ($this->beverage->getSize()){
+            case Beverage::GRANDE : $price = 15;
+                break;
+            case Beverage::VENTI : $price = 20;
+                break;
+            default : $price = 10;
+        }
+
+        return $price;
     }
 }

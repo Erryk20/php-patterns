@@ -12,4 +12,9 @@ interface BeverageInterface
      * @return float
      */
     public function cost(): float;
+
+    /**
+     * @return int
+     */
+    public function getSize(): int;
 }
