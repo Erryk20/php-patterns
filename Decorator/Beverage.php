@@ -1,15 +1,20 @@
 <?php
 declare(strict_types=1);
+
 namespace Decorator;
 
-abstract class Beverage {
+abstract class Beverage implements BeverageInterface
+{
+    /**
+     * @var string
+     */
+    public $description = "Unknow Beverage";
 
-	public $description = "Unknow Beverage";
-
-	public function getDescription(): string
-	{
-		return $this->description;
-	}
-
-	public abstract function cost(): float;
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
 }

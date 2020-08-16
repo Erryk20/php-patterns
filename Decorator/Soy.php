@@ -3,16 +3,17 @@ declare(strict_types=1);
 
 namespace Decorator;
 
+use Decorator\Beverage;
 use \Decorator\CondimentDecorator;
 
-class Mocha extends CondimentDecorator
+class Soy extends CondimentDecorator
 {
     /**
      * @return string
      */
     public function getDescription(): string
     {
-        return $this->beverage->getDescription() . ", Mocha";
+        return $this->beverage->getDescription() . ", Soy";
     }
 
     /**
@@ -20,6 +21,6 @@ class Mocha extends CondimentDecorator
      */
     public function cost(): float
     {
-        return .20 + $this->beverage->cost();
+        return .30 + $this->beverage->cost();
     }
 }
