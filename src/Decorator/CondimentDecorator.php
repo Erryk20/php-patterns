@@ -5,23 +5,13 @@ namespace Decorator;
 
 abstract class CondimentDecorator implements BeverageInterface
 {
-    /**
-     * @var BeverageInterface
-     */
-    public $beverage;
+    public BeverageInterface $beverage;
 
-    /**
-     * Mocha constructor.
-     * @param BeverageInterface $beverage
-     */
     public function __construct(BeverageInterface $beverage)
     {
         $this->beverage = $beverage;
     }
 
-    /**
-     * @return int
-     */
     public function getSize(): int
     {
         return $this->beverage->getSize();

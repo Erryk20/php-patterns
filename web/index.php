@@ -1,0 +1,5 @@
+<ul>
+    <li><a href="decorator.php">Decorator</a></li>
+    <li><a href="factory.php">Factory</a></li>
+</ul>
+
